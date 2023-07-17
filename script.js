@@ -3,6 +3,8 @@ const addButton = document.querySelector("form button");
 const taskList = document.querySelector(".list");
 let taskArr = [];
 
+showTasks();
+
 // Activate and deactivate input button
 addInput.addEventListener("keyup", (e) => {
     e.preventDefault();
@@ -53,11 +55,19 @@ function showTasks() {
         footerMessage.textContent = `You have ${pendingNum} pending ${taskType}`;
     }
     
-
     // show tasks as list items
     let newTask = "";
     taskArr.forEach((element, index) => {
         newTask += `<li>${element} <span onclick="deleteTask(${index})"><i class="fas fa-trash"></i></li>`
     });
     taskList.innerHTML = newTask;
+}
+
+// Delete task
+function deleteTask(index) {
+    let getLocalStorage = localStorage.getItem("Todo");
+    taskArr = JSON.parse(getLocalStorage);
+    taskArr.splice(index, 1);
+    localStorage.setItem("Todo", JSON.stringify(taskArr));
+    showTasks();
 }
