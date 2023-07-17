@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+* {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  height: 100vh;
+  width: 100%;
+}
+
+.card {
+  background-color: #fff;
+  margin: 150px auto;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.header {
+  height: 150px;
+  text-align: center;
+  padding-top: 20px;
+  cursor: default;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #707070;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #707070;
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input .add-input {
+  padding-left: 15px;
+  padding-bottom: 3px;
+  border: 1px solid #707070;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.input button {
+  width: 45px;
+  margin-left: 5px;
+  border-radius: 3px;
+  border: none;
+  background-image: linear-gradient(to bottom right, #84d9b0, #a0e8a5);
+  cursor: default;
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.input .active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.input button p {
+  font-size: 2rem;
+  color: white;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.input .active:hover p {
+  transform: rotate(90deg);
+}
+
+.list {
+  max-height: 200px;
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
+.list li {
+  list-style: none;
+  font-size: 1.2rem;
+  background: #f4f4f4;
+  margin-bottom: 5px;
+  height: 40px;
+  line-height: 40px;
+  color: #707070;
+  border-radius: 3px;
+  display: flex;
+  padding-left: 15px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.list li:hover {
+  background: #fafafa;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}
+
+.list span {
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #ff7c7c, #ff8549);
+  height: 100%;
+  width: 40px;
+  text-align: center;
+  right: -40px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.list li:hover span {
+  right: 0;
+}
+
+.footer {
+  background-image: linear-gradient(to bottom right, #84d9b0, #a0e8a5);
+  padding: 10px 15px;
+  margin: -20px -20px;
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
